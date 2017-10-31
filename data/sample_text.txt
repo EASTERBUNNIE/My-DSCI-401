@@ -1,0 +1,4 @@
+Hello, this is some sample text.
+I will be counting the words from this file to test a function. 
+Big dogs gotta eat!
+Apple Apple Apple
