@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Geoffry Berryman DSCI 401 Homework 1
 
 def flatten(y):
@@ -44,4 +45,44 @@ def  numspi(num, d):
 			
 		
 	return(my_list)	
+=======
+#Geoffry Berryman DSCI 401 Homework 1
+
+def flatten(y):
+  answer = []
+  for item in y:
+    if type(item) == type([]):
+      answer.extend(flatten(item))
+    else:
+	  answer.append(item)
+  return answer
+  
+def powerset(z):
+	the_set = [[]]
+	count = 1
+	for item in z:
+		for thing in the_set:
+			the_set = the_set + [list(thing)+[item]]
+			count = count+1
+	print ("Number of combinations: ",count)
+	return the_set
+
+#def all_perms(x):
+
+def all_perms(z):
+    if not z:
+            return [[]]
+    answer = []
+    for thing in z:
+            temp = z[:]
+            temp.remove(thing)
+            answer.extend([[thing] + a for a in all_perms(temp)])
+    return answer
+	
+		
+def  numspi(num, squ):
+	max = num*num
+	size = num
+	nums = list(range(0,max))
+>>>>>>> b235cb476479d9da1631f2ebdfc4341205116d93
 	
